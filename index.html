@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achraf Kedidi's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+            padding: 1rem 0;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: var(--secondary-color);
+        }
+        
+        .contact-form .form-control {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-color);
+            color: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .project-image {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .typed-text {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Achraf Kedidi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+      
+      </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Hello, I'm <span class="typed-text">Achraf</span></h1>
+            <p class="lead mb-4">Web Developer & Computer Science Student</p>
+            <a href="#about" class="btn btn-light btn-lg mx-2">About Me</a>
+            <a href="#projects" class="btn btn-outline-light btn-lg mx-2">My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="https://via.placeholder.com/400x400" alt="Profile Picture" class="img-fluid rounded-circle">
+                </div>
+                <div class="col-md-6">
+                    <h3>Computer Science Student</h3>
+                    <p>I am a passionate computer science student currently working with Oracle Database 11g R2 XE and exploring web development technologies. With a strong foundation in Linux-based systems and a preference for Debian distributions, I'm dedicated to continuous learning and professional growth.</p>
+                    <p>Currently based in Tunisia, I'm focused on building robust web applications and enhancing my technical skills through various projects and certifications.</p>
+                    <div class="mt-4">
+                        <a href="#contact" class="btn btn-outline-primary">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Skills & Technologies</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-4 mb-4">
+                        <h4><i class="bi bi-code-slash me-2"></i>Frontend Development</h4>
+                        <div class="mb-3">
+                            <span class="fw-bold">HTML5 & CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="fw-bold">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="fw-bold">Bootstrap</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4 mb-4">
+                        <h4><i class="bi bi-database me-2"></i>Backend & Database</h4>
+                        <div class="mb-3">
+                            <span class="fw-bold">Oracle Database</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="fw-bold">Linux Administration</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <span class="fw-bold">Virtualization (VirtualBox)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Featured Projects</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 1" class="card-img-top project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Database Management System</h5>
+                            <p class="card-text">A comprehensive database solution built with Oracle 11g R2 XE focusing on efficient data storage and retrieval.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 2" class="card-img-top project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Responsive Web Application</h5>
+                            <p class="card-text">A fully responsive web application using HTML, CSS, JavaScript, and Bootstrap framework.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 3" class="card-img-top project-image">
+                        <div class="card-body">
+                            <h5 class="card-title">Linux Virtual Environment</h5>
+                            <p class="card-text">Virtualized Debian environment setup with VirtualBox for development and testing purposes.</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center">Education & Experience</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-4 mb-4">
+                        <h4><i class="bi bi-mortarboard me-2"></i>Education</h4>
+                        <div class="mb-4">
+                            <h5>Bachelor's in Computer Science</h5>
+                            <p class="text-muted">Current Student | University Name</p>
+                            <p>Studying core computer science concepts, database management, and web development technologies.</p>
+                        </div>
+                        <div>
+                            <h5>Free Certifications</h5>
+                            <p class="text-muted">Ongoing | Online Platforms</p>
+                            <p>Pursuing various free web development certifications to enhance my professional profile.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4 mb-4">
+                        <h4><i class="bi bi-briefcase me-2"></i>Technical Experience</h4>
+                        <div class="mb-4">
+                            <h5>Database Administration</h5>
+                            <p class="text-muted">Oracle 11g R2 XE | Current</p>
+                            <p>Working with Oracle Database for various projects and assignments.</p>
+                        </div>
+                        <div>
+                            <h5>Linux System Administration</h5>
+                            <p class="text-muted">Debian-Based Systems | Ongoing</p>
+                            <p>Proficient in Debian and Debian derivative distributions (Ubuntu) with focus on system optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Get In Touch</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <h4>Contact Information</h4>
+                        <div class="mt-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-envelope fs-4 me-3"></i>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    achrafkedidi@gmail.com
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-globe fs-4 me-3"></i>
+                                <div>
+                                    <strong>Location:</strong><br>
+                                    Tunisia
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-linkedin fs-4 me-3"></i>
+                                <div>
+                                    <strong>LinkedIn:</strong><br>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h5>Follow Me</h5>
+                            <div class="social-links">
+                                <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+                                <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-4">
+                        <h4>Send a Message</h4>
+                        <form class="contact-form mt-4">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Achraf Kedidi. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
